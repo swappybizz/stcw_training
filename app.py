@@ -26,9 +26,10 @@ if "quiz_over" not in st.session_state:
 
 
 
-def fetch_nextQuestion(user_query, stcw_section, history):
+def fetch_nextQuestion(stcw_section, history):
     system_prompt = """
     You are STCW Examiner. You generate multiple choice questions to test the knowledge of the user on the STCW sections.
+    You will focus on {stcw_section} section.
     Respond only in valid JSON format.
     """
     user_prompt = """
@@ -37,7 +38,6 @@ def fetch_nextQuestion(user_query, stcw_section, history):
     
     ###
     Chat History: {history}
-    User Query: {user_query}
     ###
     randomly arrange the options.
     options need to be  tricky with partially correct solution, fully correct solution, a solution that is close but not correct, and a solution that is completely wrong.
