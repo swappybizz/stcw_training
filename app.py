@@ -7,7 +7,8 @@ stcw_sections = [
     "Personal Survival Techniques",
     "Elementary First Aid",
     "Personal Safety and Social Responsibilities",
-    "Security Awareness Training"
+    "Security Awareness Training",
+    "life at sea",
 ]
 # Initialize session state variables
 if "current_question_answer" not in st.session_state:
