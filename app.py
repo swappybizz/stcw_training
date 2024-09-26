@@ -106,7 +106,7 @@ st.sidebar.markdown(f"**Current Score:** {st.session_state.score}/{st.session_st
 
 if not st.session_state.quiz_over:
     #fetch the next question
-    main_question, option1_txt, option2_txt, option3_txt, option4_txt, option1_score, option2_score, option3_score, option4_score = fetch_nextQuestion("", selected_section, st.session_state.question_history)
+    main_question, option1_txt, option2_txt, option3_txt, option4_txt, option1_score, option2_score, option3_score, option4_score = fetch_nextQuestion(selected_section, st.session_state.question_history)
     st.session_state.current_question_answer = {
         "main_question": main_question,
         "option1": option1_txt,
